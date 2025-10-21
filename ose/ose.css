@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+:root {
+  --ose-bg: #ffffff;
+  --ose-fg: #000000;
+  --ose-muted: #555555;
+  --ose-accent: #165b33;
+  --ose-accent-light: #e5f5e5;
+  --ose-line: #cccccc;
+  --ose-table-zebra: #f9f9f9;
+  --ose-code-bg: #f3f3f3;
+  --ose-inline-code: #333333;
+  --ose-heading: 'Lora', serif;
+  --ose-body: 'Lora', serif;
+  --ose-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* ========== Base ========== */
+html, body {
+  background: var(--ose-bg);
+  color: var(--ose-fg);
+  font-family: var(--ose-body);
+  font-size: 15px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+#write {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ========== Headings ========== */
+.typora-export #write h1, .typora-export #write h2, .typora-export #write h3,
+.typora-export #write h4, .typora-export #write h5, .typora-export #write h6,
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 {
+  font-family: var(--ose-heading);
+  font-weight: 700;
+  color: var(--ose-fg);
+  margin-top: 1.1rem !important;
+  margin-bottom: 0.4rem !important;
+  line-height: 1.15 !important;
+}
+
+#write h1 {
+  font-size: 3rem !important;
+}
+
+#write h2 {
+  font-size: 1.5rem;
+  background: var(--ose-accent-light);
+  padding: 0.35rem 0.6rem;
+  margin-top: 2rem;
+}
+
+#write h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.15rem !important;
+}
+
+#write h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem !important;
+}
+
+#write h5 {
+  font-size: 1rem;
+  margin-bottom: 0.15rem !important;
+}
+
+#write h6 {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 0.15rem !important;
+}
+
+/* Tighten gap after H3–H6 + paragraph */
+.typora-export #write h3 + p, .typora-export #write h4 + p,
+.typora-export #write h5 + p, .typora-export #write h6 + p,
+#write h3 + p, #write h4 + p, #write h5 + p, #write h6 + p {
+  margin-top: 0.1rem !important;
+}
+
+/* ========== Paragraphs ========== */
+#write p {
+  margin: 0.5rem 0 0.9rem;
+}
+
+/* ========== Text Alignment ========== */
+#write p, #write li, #write blockquote,
+#write table td, #write table th {
+  text-align: justify;
+}
+
+/* ========== Unordered Lists ========== */
+.typora-export #write ul, #write ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.typora-export #write :is(ul):first-child,
+#write :is(ul):first-child {
+  margin-top: 0.2rem !important;
+}
+
+.typora-export #write ul > li, #write ul > li {
+  position: relative !important;
+  padding-left: 1.3rem !important;
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.03rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: inherit !important;
+}
+
+/* Triangle bullet marker */
+.typora-export #write ul > li::before, #write ul > li::before {
+  content: "►" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.18em !important;
+  line-height: 1 !important;
+}
+
+/* Nested unordered lists */
+.typora-export #write ul ul, #write ul ul {
+  padding-left: 1.3rem !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.1rem !important;
+}
+
+.typora-export #write li > ul, #write li > ul {
+  margin-top: 0.25rem !important;
+}
+
+/* ========== Ordered Lists ========== */
+.typora-export #write ol, #write ol {
+  padding-left: 1.7rem !important;
+  margin-bottom: 0.2rem !important;
+}
+
+.typora-export #write :is(ol):first-child,
+#write :is(ol):first-child {
+  margin-top: 0.2rem !important;
+}
+
+.typora-export #write ol > li, #write ol > li {
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.03rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: inherit !important;
+}
+
+.typora-export #write ol li::marker, #write ol li::marker {
+  font-weight: 700 !important;
+}
+
+/* Nested ordered lists */
+.typora-export #write ol ol, #write ol ol {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.1rem !important;
+}
+
+.typora-export #write li > ol, #write li > ol {
+  margin-top: 0.25rem !important;
+}
+
+/* ========== List Item Paragraphs ========== */
+.typora-export #write li > p, #write li > p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.typora-export #write li > p + p, #write li > p + p {
+  margin-top: 0.25rem !important;
+}
+
+/* ========== List Spacing After Elements ========== */
+.typora-export #write p + ul, .typora-export #write p + ol,
+#write p + ul, #write p + ol {
+  margin-top: -0.7rem !important;
+}
+
+.typora-export #write blockquote + ul, .typora-export #write blockquote + ol,
+#write blockquote + ul, #write blockquote + ol {
+  margin-top: -0.8rem !important;
+}
+
+.typora-export #write table + ul, .typora-export #write table + ol,
+#write table + ul, #write table + ol {
+  margin-top: -0.4rem !important;
+}
+
+.typora-export #write h1 + ul, .typora-export #write h1 + ol,
+.typora-export #write h2 + ul, .typora-export #write h2 + ol,
+.typora-export #write h3 + ul, .typora-export #write h3 + ol,
+.typora-export #write h4 + ul, .typora-export #write h4 + ol,
+.typora-export #write h5 + ul, .typora-export #write h5 + ol,
+.typora-export #write h6 + ul, .typora-export #write h6 + ol,
+#write h1 + ul, #write h1 + ol,
+#write h2 + ul, #write h2 + ol,
+#write h3 + ul, #write h3 + ol,
+#write h4 + ul, #write h4 + ol,
+#write h5 + ul, #write h5 + ol,
+#write h6 + ul, #write h6 + ol {
+  margin-top: -0.2rem !important;
+}
+
+.typora-export #write pre + ul, .typora-export #write pre + ol,
+.typora-export #write .md-fences + ul, .typora-export #write .md-fences + ol,
+#write pre + ul, #write pre + ol,
+#write .md-fences + ul, #write .md-fences + ol {
+  margin-top: 0 !important;
+}
+
+.typora-export #write * + ul, .typora-export #write * + ol,
+#write * + ul, #write * + ol {
+  margin-top: 0.2rem !important;
+}
+
+/* ========== Blockquotes ========== */
+.typora-export #write blockquote, #write blockquote {
+  border-left: 3px solid #000 !important;
+  background: #eeeeee !important;
+  color: inherit !important;
+  font-style: normal !important;
+  margin: 0.25rem 0 !important;
+  padding: 0.25rem 0.6rem !important;
+  line-height: inherit !important;
+}
+
+.typora-export #write blockquote > :first-child,
+#write blockquote > :first-child {
+  margin-top: 0 !important;
+}
+
+.typora-export #write blockquote > :last-child,
+#write blockquote > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.typora-export #write blockquote p, .typora-export #write blockquote li,
+#write blockquote p, #write blockquote li {
+  line-height: inherit !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Nested blockquotes */
+.typora-export #write blockquote blockquote,
+#write blockquote blockquote {
+  border-left: 2px solid #000 !important;
+  background: #f3f3f3 !important;
+  margin: 0.2rem 0 !important;
+  padding: 0.2rem 0.5rem !important;
+}
+
+/* ========== Tables ========== */
+#write table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: -0.2rem 0 0rem !important;
+  border: 1px solid var(--ose-line);
+}
+
+#write thead th {
+  background: #000000 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.35rem 0.55rem !important;
+  line-height: 1.2 !important;
+  border-bottom: 2px solid var(--ose-line);
+}
+
+#write tbody td, #write tbody th {
+  padding: 0.35rem 0.55rem !important;
+  line-height: 1.2 !important;
+  border-top: 1px solid var(--ose-line);
+}
+
+#write tbody tr:nth-child(odd) td {
+  background: #ffffff !important;
+}
+
+#write tbody tr:nth-child(even) td {
+  background: var(--ose-accent-light) !important;
+}
+
+/* ========== Inline Code ========== */
+#write code, #write tt {
+  font-family: var(--ose-mono);
+  background: var(--ose-code-bg);
+  color: var(--ose-inline-code);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* ========== Links ========== */
+#write a {
+  color: var(--ose-accent);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+#write a:hover {
+  text-decoration: underline;
+}
+
+/* ========== Horizontal Rule ========== */
+#write hr {
+  border: 0;
+  border-top: 1px solid var(--ose-line);
+  margin: 1.2rem 0;
+}
+
+/* ========== Nested list vertical spacing ========== */
+.typora-export #write li p + ul,
+.typora-export #write li p + ol,
+#write li p + ul,
+#write li p + ol {
+  /* Restore breathing room for nested lists that follow a paragraph */
+  margin-top: 0.30rem !important;
+}
+
+.typora-export #write li > ul,
+.typora-export #write li > ol,
+#write li > ul,
+#write li > ol {
+  /* Ensure a consistent gap before any nested list */
+  margin-top: 0.30rem !important;
+}
+
+.typora-export #write ul ul,
+#write ul ul,
+.typora-export #write ol ol,
+#write ol ol {
+  /* Harmonize nested list block spacing */
+  margin-top: 0.30rem !important;
+  margin-bottom: 0.20rem !important;
+}
