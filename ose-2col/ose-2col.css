@@ -372,7 +372,7 @@ html, body {
 .typora-export #write figure,
 .typora-export #write img,
 .typora-export #write ul,
-.typora-export #write ol { break-inside: avoid-column; }
+.typora-export #write ol,
 .typora-export #write p,
 .typora-export #write li { orphans: 2; widows: 2; }
 .typora-export #write table,
