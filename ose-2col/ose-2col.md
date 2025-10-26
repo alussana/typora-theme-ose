@@ -39,6 +39,14 @@ Compared to the OSE books, tables lack the title row and finer formatting option
 | 20   | 21   | 22   | 23   | 24   |
 | 30   | 31   | 32   | 33   | 34   |
 
+## Column Breaks
+
+To insert a manual column break, add the following line of html code in the location where the column break should be placed:
+
+```html
+<div class="column-break"></div>
+```
+
 ## Lines
 
 Horizontal lines are kept thin and of the same black shade used for the text:

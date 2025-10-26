@@ -397,3 +397,14 @@ html, body {
 .typora-export #write { column-gap: 1.6rem; } /* reduce gap slightly */
 .typora-export #write img,
 .typora-export #write table { max-width: 100% !important; }
+
+
+/* ========== Page Breaks for Two-Column Layout ========== */
+.column-break {
+  break-after: column;
+  break-inside: avoid;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+}
